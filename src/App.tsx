@@ -1,4 +1,4 @@
-import { DisplayComponent } from './components/display.component';
+import { DisplayComponent } from './components/';
 import './App.css';
 
 function App() {
