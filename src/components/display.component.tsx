@@ -11,7 +11,7 @@ export const DisplayComponent = () => {
         <div>
             <h1>Image Upload with OCR</h1>
             <ImageUpload onTextExtracted={handleTextExtracted} />
-            <p>{ocrText}</p>
+            { ocrText && <textarea className='text'>{ocrText}</textarea>}
         </div>
     );
 };

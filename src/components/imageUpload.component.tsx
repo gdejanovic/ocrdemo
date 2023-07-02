@@ -62,9 +62,11 @@ const ImageUpload: React.FC<ImageUploadProps> = ({ onTextExtracted }) => {
 
     return (
         <div>
-            <input type="file" accept="image/*" onChange={handleImageUpload} />
-            {ocrInProgress ? <p>Performing OCR...</p> : null}
-            {selectedImage && <img src={URL.createObjectURL(selectedImage)} alt="Uploaded" />}
+            <input type="file" accept="image/*" className='input-btn' onChange={handleImageUpload} />
+            {ocrInProgress ? <p className='message'>Performing OCR...</p> : null}
+            <div>
+                {selectedImage && <img src={URL.createObjectURL(selectedImage)} alt="Uploaded" />}
+            </div>
         </div>
     );
 };
